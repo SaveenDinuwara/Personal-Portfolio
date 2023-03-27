@@ -301,19 +301,27 @@
    color:#9d4edd;
  }
 
-/** .projects-box:hover .bx {
-   color: #22cf91;
- }**/
+ /**.projects-box:hover .bx {
+   color: #22cf91;*/
 
  .projects-box a {
    color:#e0aaff;
    font-size: var(--p-font);
    font-weight: 500;
- }
+ } 
+
+ .projects-box h3  {
+  color:#ffffff;
+} 
+.projects-box h6  {
+  color:#ffffff;
+} 
+
+
 
  .projects-box:hover a {
    color: #8b8a8f;
- }
+ }**/
 
  /* Font Awesome styles */
 .fa {
