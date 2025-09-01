@@ -164,6 +164,27 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal { transform: translateY(50px); }
 
+/* --- NEW: Browser Autofill Style Override --- */
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover, 
+.contact-form input:-webkit-autofill:focus, 
+.contact-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--glass-bg) inset !important;
+    -webkit-text-fill-color: var(--main-text-color) !important;
+    caret-color: var(--main-text-color) !important;
+    border-radius: 10px !important; /* Ensures the radius is maintained */
+}
+
+/* For Light Mode Autofill */
+body.light-mode .contact-form input:-webkit-autofill,
+body.light-mode .contact-form input:-webkit-autofill:hover, 
+body.light-mode .contact-form input:-webkit-autofill:focus, 
+body.light-mode .contact-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--glass-bg) inset !important;
+    -webkit-text-fill-color: var(--main-text-color) !important;
+    caret-color: var(--main-text-color) !important;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 991px) {
   header { padding: 18px 4%; }
