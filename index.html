@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-C8YwStcy17WWd6UkVMl4mP8F4wy0cTKbMcvpJrKv/U8wY2QzA95yxOIR9wkzvSeLWfnOqmHdD0sZkJFt0/+Idw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <!-- CRITICAL UPDATE: Script changed to vanta.fog.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 </head>
@@ -26,6 +27,7 @@
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -41,7 +43,7 @@
         <span>Greetings,</span>
         <h1>I'm Saveen Dinuwara!</h1>
         <p id="text">A graduate engineer focused on building innovative applications and leveraging data to deliver impactful results.</p>
-        <a href="https://drive.google.com/file/d/1asLJzR5D5SfOSKT0whjXsWzWB0XJH1kK/view?usp=drive_link" class="btn" download>Download my CV</a>
+        <a href="https://drive.google.com/file/d/1-VnOvMXdKHthz-p12Ho2k1WYmwVHZI01/view?usp=sharing" class="btn" download>Download my CV</a>
         <div class="social">
             <a href="https://github.com/SaveenDinuwara" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
             <a href="https://www.linkedin.com/in/saveen-dinuwara-b2b48a231/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
@@ -58,18 +60,59 @@
             <img src="images/7.png" alt="Saveen Dinuwara">
         </div>
         <div class="about-text reveal-right">
-            <p>I am a <span>Software Engineering graduate</span> with hands-on experience gained through an industrial placement and a portfolio of academic projects. My core skills are in <span>full-stack application development</span>, data analysis, and applying <span>machine learning</span> techniques to solve real-world problems.</p>
+            <p>I am a <span>Software Engineering graduate</span> with hands-on experience gained through an industrial placement and a portfolio of academic projects. My core skills are in <span>Software Development</span>, data analysis, and applying <span>machine learning</span> techniques to solve real-world problems.</p>
             <p>I am enthusiastic about learning new technologies and thrive in environments that demand creative solutions. I am comfortable taking full responsibility for both technical implementation and <span>project coordination</span>, with a strong focus on collaboration, innovation, and delivering measurable results. I am actively seeking a role where I can contribute to a forward-thinking team and continue to grow my skills.</p>
+        </div>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <div class="heading">
+        <h2>Skills</h2>
+        <span>My Technical Toolkit</span>
+    </div>
+    <div class="skills-container reveal">
+        <div class="skill-card">
+            <h3>Programming & Development</h3>
+            <div class="skill-tags">
+                <span>Java</span><span>Python</span><span>JavaScript</span><span>R</span><span>SQL</span><span>HTML/CSS</span><span>OOP</span><span>MVC</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>Machine Learning & AI</h3>
+            <div class="skill-tags">
+                <span>PyTorch</span><span>Hugging Face</span><span>TensorFlow</span><span>Scikit-learn</span><span>OpenCV</span><span>NLP</span><span>CNNs</span><span>Multimodal Learning</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>Data Analysis & Optimisation</h3>
+            <div class="skill-tags">
+                <span>Excel</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-tags">
+                <span>Git</span><span>Kaggle</span><span>Colab</span><span>Gradio</span>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="projects" id="projects">
     <div class="heading">
-        <h2>Projects</h2><br>
+        <h2>Projects</h2>
         <span>My Projects</span>
     </div>
     <div class="projects-content reveal">
+        <a href="https://github.com/SaveenDinuwara/IntegraBNER-Integrating-Multimodal-Data-for-Enhanced-Biological-Named-Entity-Recognition-" target="_blank" rel="noopener noreferrer">
+            <div class="projects-box">
+                <div class="project-image"><img src="images/project-integra.jpg" alt="IntegraBNER Project"></div>
+                <h3>IntegraBNER</h3>
+                <p>A deep learning system combining clinical text and chest X-rays for enhanced biomedical entity recognition.</p>
+                <div class="tech-stack"><span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>ResNet-50</span><span>BioClinicalBERT</span><span>Gradio</span></div>
+            </div>
+        </a>
         <a href="https://github.com/Janandithvinura/TomatinaSdgp" target="_blank" rel="noopener noreferrer">
             <div class="projects-box">
                 <div class="project-image"><img src="images/project-tomatina.webp" alt="Tomatina Project"></div>
@@ -91,7 +134,7 @@
                 <div class="project-image"><img src="images/project-predictor.jpg" alt="Progression Predictor Project"></div>
                 <h3>Progression Outcome Predictor</h3>
                 <p>A Python program using historical data to predict academic outcomes, providing insights for student support.</p>
-                <div class="tech-stack"><span>Python</span><span>Data Analysis</span></div>
+                <div class="tech-stack"><span>Python</span></div>
             </div>
         </a>
         <a href="https://github.com/SaveenDinuwara/Fuel-Queue-Manager" target="_blank" rel="noopener noreferrer">
@@ -100,14 +143,6 @@
                 <h3>Fuel Queue Manager</h3>
                 <p>A data-centric application for managing and optimizing fuel queues through efficient data structures.</p>
                 <div class="tech-stack"><span>Java</span><span>JavaFX</span></div>
-            </div>
-        </a>
-        <a href="https://github.com/SaveenDinuwara/Ceylonoholic" target="_blank" rel="noopener noreferrer">
-            <div class="projects-box">
-                <div class="project-image"><img src="images/project-ceylon.jpg" alt="Ceylonoholic Project"></div>
-                <h3>Ceylonoholic</h3>
-                <p>A responsive front-end website developed to promote tourism in Sri Lanka with a modern UI/UX.</p>
-                <div class="tech-stack"><span>HTML</span><span>CSS</span><span>Javascript</span></div>
             </div>
         </a>
         <a href="https://github.com/SaveenDinuwara/Personal-Portfolio" target="_blank" rel="noopener noreferrer">
@@ -121,50 +156,65 @@
     </div>
 </section>
 
-<!-- NEW: Redesigned Contact Section -->
 <section class="contact" id="contact">
-    <div class="heading">
-        <h2>Let's Connect</h2>
-        <span>Get In Touch</span>
-    </div>
     <div class="contact-container reveal">
-        <div class="contact-info-grid">
-            <a href="mailto:saveendinuwara@gmail.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p>saveendinuwara@gmail.com</p>
-            </a>
-            <a href="tel:0786395561" class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p>0786395561</p>
-            </a>
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>"Laksiri", Pahala Lelwala, Waduramba, Sri Lanka</p>
+        <div class="contact-card">
+            <div class="contact-header">
+                <h2>Let's Connect</h2>
+                <p>I'm open to new opportunities and collaborations. Feel free to reach out.</p>
             </div>
+            <div class="contact-links">
+                <a href="javascript:void(0);" class="contact-link-item" id="email-link">
+                    <div class="contact-link-icon"><i class='bx bx-envelope'></i></div>
+                    <div class="contact-link-text">
+                        <span>Email</span>
+                        <span class="contact-detail" data-original-text="saveendinuwara@gmail.com">saveendinuwara@gmail.com</span>
+                    </div>
+                </a>
+                <a href="tel:0786395561" class="contact-link-item">
+                    <div class="contact-link-icon"><i class='bx bx-phone'></i></div>
+                    <div class="contact-link-text">
+                        <span>Phone</span>
+                        <span class="contact-detail">0786395561</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/saveen-dinuwara-b2b48a231/" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                    <div class="contact-link-icon"><i class='bx bxl-linkedin'></i></div>
+                    <div class="contact-link-text">
+                        <span>LinkedIn</span>
+                        <span class="contact-detail">/in/saveen-dinuwara</span>
+                    </div>
+                </a>
+                <div class="contact-link-item non-interactive">
+                    <div class="contact-link-icon"><i class='bx bx-map'></i></div>
+                    <div class="contact-link-text">
+                        <span>Location</span>
+                        <div class="contact-address-detail">
+                            "Laksiri", Pahala Lelwala,<br>
+                            Waduramba, Sri Lanka
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-separator"></div>
+            <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                <p class="hidden" style="display: none;">
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
+                <textarea name="message" id="message" placeholder="Or, send a quick message here..." required></textarea>
+                <input type="submit" value="Send Message" class="contact-button">
+            </form>
         </div>
-        <form class="contact-form" action="your-script-url" method="POST">
-            <textarea name="message" id="message" placeholder="Write your message here..." required></textarea>
-            <input type="submit" value="Send Message" class="contact-button">
-        </form>
     </div>
 </section>
 
-<div class="footer">
-    <h2>Follow Me</h2>
-    <div class="footer-social">
-        <a href="https://www.facebook.com/profile.php?id=100085419461155" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
-        <a href="https://twitter.com/saveendinuwara" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
-        <a href="https://www.instagram.com/saveen_dinuwara/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
+<footer class="footer">
+    <div class="copyright">
+        &#169; Saveen Dinuwara | All Right Reserved.
     </div>
-</div>
-
-<div class="copyright">
-    &#169; Saveen Dinuwara | All Right Reserved.
-</div>
+</footer>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
-

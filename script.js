@@ -10,12 +10,41 @@ menu.onclick = () => navbar.classList.toggle("active");
 window.onscroll = () => navbar.classList.remove("active");
 
 // --- DYNAMIC VANTA.JS BACKGROUND ---
-const lightThemeVanta = { el: "#home", mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200.00, minWidth: 200.00, scale: 1.00, scaleMobile: 1.00, color: 0x9d4edd, backgroundColor: 0xfaf9f6, points: 13.00, maxDistance: 12.00, spacing: 17.00 };
-const darkThemeVanta = { el: "#home", mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200.00, minWidth: 200.00, scale: 1.00, scaleMobile: 1.00, color: 0x9d4edd, backgroundColor: 0x0D0C1D, points: 13.00, maxDistance: 12.00, spacing: 17.00 };
+const lightThemeVanta = {
+    el: "#home",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0xe8e1f2, // Morning Mist highlight
+    midtoneColor: 0xc5b0d9,   // Morning Mist midtone
+    lowlightColor: 0xe0d8f0,  // Morning Mist lowlight
+    baseColor: 0xfaf9f6,      // Must match --bg-color
+    blurFactor: 0.60,
+    speed: 1.20,
+    zoom: 0.80
+};
+const darkThemeVanta = {
+    el: "#home",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0x5a189a, // Deep Nebula highlight
+    midtoneColor: 0x3D1E6D,   // Deep Nebula midtone
+    lowlightColor: 0x190d2e,  // Deep Nebula lowlight
+    baseColor: 0x0D0C1D,      // Must match --bg-color
+    blurFactor: 0.60,
+    speed: 1.20,
+    zoom: 0.80
+};
 
 function setVantaTheme(theme) {
     if (vantaEffect) vantaEffect.destroy();
-    vantaEffect = VANTA.NET(theme === 'light' ? lightThemeVanta : darkThemeVanta);
+    // UPDATED: Using the final, most aesthetic FOG effect
+    vantaEffect = VANTA.FOG(theme === 'light' ? lightThemeVanta : darkThemeVanta);
 }
 
 // --- LIGHT/DARK MODE TOGGLE ---
@@ -38,7 +67,7 @@ setVantaTheme(savedTheme);
 
 // --- AURA CURSOR ---
 const cursor = document.querySelector(".cursor");
-const interactiveElements = document.querySelectorAll("a, button, .btn, .logo, i, .about-img");
+const interactiveElements = document.querySelectorAll("a, button, .btn, .logo, i, .about-img, .skill-card, .contact-link-item:not(.non-interactive)");
 window.addEventListener("mousemove", (e) => {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
@@ -59,3 +88,20 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   });
 }, { threshold: 0.1 });
 revealElements.forEach(el => revealObserver.observe(el));
+
+// --- Email Copy to Clipboard ---
+const emailLink = document.querySelector("#email-link");
+const emailDetailSpan = emailLink.querySelector(".contact-detail");
+emailLink.addEventListener("click", () => {
+    const originalText = emailDetailSpan.dataset.originalText;
+    navigator.clipboard.writeText(originalText).then(() => {
+        emailDetailSpan.textContent = "Copied!";
+        setTimeout(() => {
+            emailDetailSpan.textContent = originalText;
+        }, 2000); // Revert back after 2 seconds
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+        // Fallback for browsers that don't support it
+        window.location.href = `mailto:${originalText}`;
+    });
+});
