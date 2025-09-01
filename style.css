@@ -137,10 +137,19 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
 .contact-detail { color: var(--second-text-color); font-size: 0.9rem; }
 .contact-address-detail { color: var(--second-text-color); font-size: 0.85rem; line-height: 1.5; margin-top: 0.25rem; }
 .contact-separator { height: 1px; background-color: var(--glass-border); margin-bottom: 2rem; }
-.contact-form textarea { padding: 15px; border-radius: 10px; width: 100%; border: 1px solid var(--glass-border); outline: none; background: var(--glass-bg); color: var(--main-text-color); font-size: 1rem; resize: none; min-height: 120px; margin-bottom: 1rem; }
+/* UPDATED: Combined rule for all form inputs */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea { padding: 15px; border-radius: 10px; width: 100%; border: 1px solid var(--glass-border); outline: none; background: var(--glass-bg); color: var(--main-text-color); font-size: 1rem; }
 .contact-form textarea:focus { border-color: var(--hover-accent-color); }
 .contact-button { background: var(--brand-color); color: #fff; border: none; padding: 1rem; border-radius: 0.5rem; transition: background-color 0.3s; width: 100%; font-size: 1rem; }
 .contact-button:hover { background: var(--hover-accent-color); }
+/* NEW: Style for the side-by-side input fields */
+.form-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
 
 /* --- Footer --- */
 .footer { padding: 20px; }

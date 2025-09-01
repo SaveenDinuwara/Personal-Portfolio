@@ -201,7 +201,11 @@
                 <p class="hidden" style="display: none;">
                     <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                 </p>
-                <textarea name="message" id="message" placeholder="Or, send a quick message here..." required></textarea>
+                <div class="form-inputs">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                </div>
+                <textarea name="message" id="message" placeholder="Write your message here..." required></textarea>
                 <input type="submit" value="Send Message" class="contact-button">
             </form>
         </div>
