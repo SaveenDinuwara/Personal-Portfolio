@@ -174,7 +174,7 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
   .contact-card { padding: 2rem; }
 }
 
-/* --- NEW: Thank You Page Styles --- */
+/* --- Thank You Page Styles --- */
 .thank-you-container {
     display: flex;
     justify-content: center;
@@ -182,6 +182,7 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
     min-height: 100vh;
     background-color: var(--bg-color);
     padding: 2rem;
+    cursor: auto;
 }
 
 .thank-you-card {
@@ -206,6 +207,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
 }
 
 .thank-you-card .btn {
-    display: inline-block; /* Ensures button styling is applied */
-    cursor: pointer; /* Ensures cursor changes on hover */
+    display: inline-block;
+    cursor: pointer;
 }
