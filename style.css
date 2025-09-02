@@ -137,19 +137,10 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
 .contact-detail { color: var(--second-text-color); font-size: 0.9rem; }
 .contact-address-detail { color: var(--second-text-color); font-size: 0.85rem; line-height: 1.5; margin-top: 0.25rem; }
 .contact-separator { height: 1px; background-color: var(--glass-border); margin-bottom: 2rem; }
-/* UPDATED: Combined rule for all form inputs */
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea { padding: 15px; border-radius: 10px; width: 100%; border: 1px solid var(--glass-border); outline: none; background: var(--glass-bg); color: var(--main-text-color); font-size: 1rem; }
+.contact-form textarea { padding: 15px; border-radius: 10px; width: 100%; border: 1px solid var(--glass-border); outline: none; background: var(--glass-bg); color: var(--main-text-color); font-size: 1rem; resize: none; min-height: 120px; margin-bottom: 1rem; }
 .contact-form textarea:focus { border-color: var(--hover-accent-color); }
 .contact-button { background: var(--brand-color); color: #fff; border: none; padding: 1rem; border-radius: 0.5rem; transition: background-color 0.3s; width: 100%; font-size: 1rem; }
 .contact-button:hover { background: var(--hover-accent-color); }
-/* NEW: Style for the side-by-side input fields */
-.form-inputs {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
 
 /* --- Footer --- */
 .footer { padding: 20px; }
@@ -163,27 +154,6 @@ header { position: fixed; width: 100%; top: 0; right: 0; z-index: 1000; display:
 .reveal-right { transform: translateX(50px); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal { transform: translateY(50px); }
-
-/* --- NEW: Browser Autofill Style Override --- */
-.contact-form input:-webkit-autofill,
-.contact-form input:-webkit-autofill:hover, 
-.contact-form input:-webkit-autofill:focus, 
-.contact-form input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px var(--glass-bg) inset !important;
-    -webkit-text-fill-color: var(--main-text-color) !important;
-    caret-color: var(--main-text-color) !important;
-    border-radius: 10px !important; /* Ensures the radius is maintained */
-}
-
-/* For Light Mode Autofill */
-body.light-mode .contact-form input:-webkit-autofill,
-body.light-mode .contact-form input:-webkit-autofill:hover, 
-body.light-mode .contact-form input:-webkit-autofill:focus, 
-body.light-mode .contact-form input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px var(--glass-bg) inset !important;
-    -webkit-text-fill-color: var(--main-text-color) !important;
-    caret-color: var(--main-text-color) !important;
-}
 
 /* --- Responsive Design --- */
 @media (max-width: 991px) {
